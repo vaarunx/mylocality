@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     
     #apps
     'mylocality',
+
+    #Third-party
+    'easy_maps',
 ]
 
 MIDDLEWARE = [
@@ -142,4 +145,4 @@ STATIC_ROOT = os.path.join(BASE_DIR , 'static_cdn')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-GOOGLE_API_KEY = "AIzaSyCGSbbDS09IBquOZXZFGH9Zs4EkXnB33Hw"
+GOOGLE_KEY = "AIzaSyCGSbbDS09IBquOZXZFGH9Zs4EkXnB33Hw"

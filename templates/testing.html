@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Checking
+    </title>
+</head>
+<body>
+<script>
+        window.onload = function(){        
+        initializeCurrentLocation();        
+        }
+    function initializeCurrentLocation(){
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } 
+        else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        console.log("Latitude: " + position.coords.latitude);
+        window.lat = position.coords.latitude
+        window.ln =  position.coords.longitude
+        console.log("Longitude: " + position.coords.longitude);
+        console.log("Hello " + window.lat);
+    }
+
+</script>
+
+<iframe
+  width="1200"
+  height="700"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCGSbbDS09IBquOZXZFGH9Zs4EkXnB33Hw&q=12.99759447989272+79.99071347989272"
+  allowfullscreen>
+</iframe>
+
+
+</body>
+</html>

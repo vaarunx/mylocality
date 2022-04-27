@@ -422,7 +422,7 @@
       }
 
       /** Number of POIs to show on widget load. */
-      const ND_NUM_PLACES_INITIAL = 20;
+      const ND_NUM_PLACES_INITIAL = 5;
 
       /** Number of additional POIs to show when 'Show More' button is clicked. */
       const ND_NUM_PLACES_SHOW_MORE = 5;
@@ -901,7 +901,7 @@
 
         ],
         "mapRadius": 2000,
-        "mapOptions": {"center":{"lat":13.76542,"lng":80.56468},"fullscreenControl":true,"mapTypeControl":true,"streetViewControl":false,"zoom":16,"zoomControl":true,"maxZoom":20},
+        "mapOptions": {"center":{"lat":13.76542,"lng":80.9875},"fullscreenControl":true,"mapTypeControl":true,"streetViewControl":false,"zoom":16,"zoomControl":true,"maxZoom":20},
         "mapsApiKey": "AIzaSyCGSbbDS09IBquOZXZFGH9Zs4EkXnB33Hw"  //Add your API Key here
       };
 
@@ -910,16 +910,16 @@
       }
     </script>
     <script id="nd-place-results-tmpl" type="text/x-handlebars-template">
-      {% for place in places %}
+      {{#each places}}
         <li class="place-result">
           <div class="text">
             <button class="name">{{name}}</button>
             <div class="info">
-              {%if rating%}
+              {{#if rating}}
                 <span>{{rating}}</span>
                 <img src="https://fonts.gstatic.com/s/i/googlematerialicons/star/v15/24px.svg" alt="rating" class="star-icon"/>
-              {% endif %}
-              {% if numReviews %}
+              {{/if}}
+              {{#if numReviews}}
                 <span>&nbsp;({{numReviews}})</span>
               {{/if}}
               {{#if priceLevel}}
