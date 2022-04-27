@@ -899,14 +899,14 @@
         ],
         "mapRadius": 2000,
         "mapOptions": {"center":{"lat":parseFloat(window.lat),"lng":parseFloat(window.ln)},"fullscreenControl":true,"mapTypeControl":true,"streetViewControl":false,"zoom":16,"zoomControl":true,"maxZoom":20},
-        "mapsApiKey": "AIzaSyCGSbbDS09IBquOZXZFGH9Zs4EkXnB33Hw"
+        "mapsApiKey": ""  //Add your API Key here
       };
 
       function initMap() {
         new NeighborhoodDiscovery(CONFIGURATION);
       }
     </script>
-    <script id="nd-place-results-tmpl" type="text/x-handlebars-template">
+    <!-- <script id="nd-place-results-tmpl" type="text/x-handlebars-template">
       {{#each places}}
         <li class="place-result">
           <div class="text">
@@ -1050,7 +1050,7 @@
           {{/each}}
         </div>
       {{/if}}
-    </script>
+    </script> -->
   </head>
   <body>
     <div class="neighborhood-discovery">
