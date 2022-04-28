@@ -6,7 +6,8 @@ from . import views
 urlpatterns = [
     path('', views.home),
     path('test/' , views.test),
-    path('check/' , views.mappingPlaces),
+    path('random/' , views.random),
+    path('maps/' , views.mappingPlaces),
 
 
 ]

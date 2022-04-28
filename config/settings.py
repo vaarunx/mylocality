@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
     #Third-party
     'easy_maps',
+    'what3words',
 ]
 
 MIDDLEWARE = [
