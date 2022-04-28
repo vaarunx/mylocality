@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'mylocality',
 
     #Third-party
-    'easy_maps',
     'what3words',
 ]
 

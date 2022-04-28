@@ -908,28 +908,6 @@
       const CONFIGURATION = {
         "capabilities": {"search":true,"distances":true,"directions":true,"contacts":true,"atmospheres":true,"thumbnails":true},
         "pois": [
-          {"placeId": "ChIJF8bO-jBmUjoRAvHYyghMIyQ"},
-          {"placeId": "ChIJ3WSdxJxoUjoRMZCq-sm2iAQ"},
-          {"placeId": "ChIJz83o6tdnUjoR36MyzEmD2-M"},
-          {"placeId": "ChIJhdCrBTdmUjoREUmBvCe3ayc"},
-          {"placeId": "ChIJW4w2OE5mUjoReen0CipnRns"},
-          {"placeId": "ChIJMxA-ichnUjoRxf5uSsVjAX0"},
-          {"placeId": "ChIJc5fXgtNnUjoRpJa6QQyhfjk"},
-          {"placeId": "ChIJTwC_pLVnUjoRa4qPhdR-WlQ"},
-          {"placeId": "ChIJGzsP_0dmUjoR326EU5ZGEww"},
-          {"placeId": "ChIJ5aBUsTFmUjoRPqSw1f1B6jc"},
-          {"placeId": "ChIJD2b_DdNnUjoRu9gobrKLB8I"},
-          {"placeId": "ChIJpR5DetJnUjoRuu6Y2GzgRu0"},
-          {"placeId": "ChIJN0-roslnUjoReRmEC9_uORQ"},
-          {"placeId": "ChIJQyyTMS1mUjoRmVsV-eOrCxg"},
-          {"placeId": "ChIJuxgmii9mUjoRl06rzkqP6Ek"},
-          {"placeId": "ChIJqaVck9dnUjoRvJ9X3BYex_Y"},
-          {"placeId": "ChIJVyfz1DJmUjoRJwKgmjXvYgI"},
-          {"placeId": "ChIJsTLjB8NnUjoRapmrLKC3-wQ"},
-          {"placeId": "ChIJo64mgnNnUjoRrjy5_JNRNeM"},
-          {"placeId": "ChIJmZK36tdnUjoRZjsICm8VRB4"},
-          {"placeId": "ChIJEU3PvzJmUjoRGgSt9DY0Dow"},
-          {"placeId": "ChIJJZwFf39oUjoRJMl5f4bsKPc"}
         ],
         "centerMarker": {"icon":"circle"},
         "mapRadius": 2500,
@@ -937,7 +915,27 @@
         "mapsApiKey": "AIzaSyCGSbbDS09IBquOZXZFGH9Zs4EkXnB33Hw"
       };
 
+
+      function showPosition(position) {
+        console.log("Latitude: " + position.coords.latitude);
+        localStorage.setItem('lat',position.coords.latitude) 
+        localStorage.setItem('ln', position.coords.longitude)
+        console.log("Longitude: " + position.coords.longitude);
+        
+    }
+
       function initMap() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        CONFIGURATION.mapOptions.center.lat = Number(localStorage.getItem('lat'))
+        CONFIGURATION.mapOptions.center.lng = Number(localStorage.getItem('ln'))
+      
+        CONFIGURATION.pois = {{place_id_list|safe }}
+        
+        
         new NeighborhoodDiscovery(CONFIGURATION);
       }
     </script>
