@@ -5,7 +5,7 @@
 [![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)](https://firebase.google.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-**🏆 First Prize Winner - PALS Event 2022 (Analyze Case Study)**  
+**🏆 First Prize Winner - PALS Event 2022 (Analyze Case Study) - IIT Madras**  
 *Awarded among 100+ teams for innovative application design and functionality*
 
 A location-based web application that discovers nearby attractions and events based on user preferences, complete with navigation routes and smart filtering options.
@@ -145,7 +145,7 @@ mylocality/
 
 ## 🏆 Recognition
 
-**PALS Event 2022 - Analyze Case Study Competition**
+**PALS Event 2022 - Analyze Case Study Competition (IIT Madras)**
 - 🥇 **First Prize** among 100+ participating teams
 - Recognized for innovative application design and functionality
 - Demonstrated practical solution for location-based discovery
